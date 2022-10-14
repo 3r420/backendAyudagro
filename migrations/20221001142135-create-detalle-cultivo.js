@@ -11,15 +11,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },*/
       id_Cultivo:{
+        allowNull: false,
+        autoIncrement:true,
+        primaryKey: true,
         type:Sequelize.INTEGER,
         references:{
           model:{ tableName:'cultivos'},
           key:'id'
         },
-        allowNull: false,
-        primaryKey: true
+       
       },
       id_Agricultor:{
+        allowNull: false,
+        primaryKey: true,
         type:Sequelize.INTEGER,
         references:{
           model:{ tableName:'Agricultores'},

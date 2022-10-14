@@ -41,6 +41,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Agricultors');
+    await queryInterface.dropTable('Agricultores');
   }
 };

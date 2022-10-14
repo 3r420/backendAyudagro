@@ -3,22 +3,30 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('perfilAcademicos', {
-      id: {
+      idEstudio: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:{tableName:'Estudios'},
+          key:'id'
+        }
       },
-      idEstudio:{
-        type:Sequelize.INTEGER
-      },
+      
       idAgricultor:{
-        type:Sequelize.INTEGER
+        allowNull:false,
+        prymaryKey:true,
+        type:Sequelize.INTEGER,
+        references:{
+          model:{tableName:'Agricultores'},
+          key:'id'
+        }
       },
       nombreCarrera: {
         type: Sequelize.STRING
       },
-      fehaGrado: {
+      fechaGrado: {
         type: Sequelize.STRING
       },
       institucion: {

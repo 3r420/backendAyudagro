@@ -16,7 +16,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       idCategoriaSuperior: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:{tableName:'categorias'},
+          key:'id'
+        }
       },
       createdAt: {
         allowNull: false,
