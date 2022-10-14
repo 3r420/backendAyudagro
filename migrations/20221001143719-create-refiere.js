@@ -3,23 +3,48 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('refieres', {
-      id: {
+      /*id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
-      },
+      },*/
       idInsumo: {
-        type: Sequelize.FLOAT
+        allowNull:false,
+        autoIncrement:true,
+        prymaryKey:true,
+        type: Sequelize.INTEGER,
+        references:{
+          model:{tableName:'insumos'},
+          key:'id'
+        }
       },
       idPregunta: {
-        type: Sequelize.FLOAT
+        allowNull:false,
+        prymaryKey:true,
+        type: Sequelize.INTEGER,
+        references:{
+          model:{tableName:'pregunta'},
+          key:'id'
+        }
       },
       idRespuesta: {
-        type: Sequelize.FLOAT
+        allowNull:false,
+        prymaryKey:true,
+        type: Sequelize.INTEGER,
+        references:{
+          model:{tableName:'respuesta'},
+          key:'id'
+        }
       },
       idAgricultor: {
-        type: Sequelize.FLOAT
+        allowNull:false,
+        prymaryKey:true,
+        type: Sequelize.INTEGER,
+        references:{
+          model:{tableName:'Agricultores'},
+          key:'id'
+        }
       },
       createdAt: {
         allowNull: false,

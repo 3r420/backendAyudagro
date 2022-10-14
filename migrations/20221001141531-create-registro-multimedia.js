@@ -23,9 +23,10 @@ module.exports = {
         references:{
             model:{
               tableName:'pregunta'
-            },key:'id'
+            },
+            key:'id'
         },
-        allowNull:false,  
+      
         },
       createdAt: {
         allowNull: false,

@@ -16,10 +16,18 @@ module.exports = {
         type: Sequelize.STRING
       },
       idCategoria:{
-        type:Sequelize.INTEGER
+        type:Sequelize.INTEGER,
+        references:{
+          model:{tableName:'categorias'},
+          key:'id'
+        },
       },
       idAgricultor:{
-        type:Sequelize.INTEGER
+        type:Sequelize.INTEGER,
+        references:{
+          model:{tableName:'agricultores'},
+          key:'id'
+        }
       },
       createdAt: {
         allowNull: false,
