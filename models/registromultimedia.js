@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.BelongsTo(models.pregunta, {as: 'pregunta'});
+      this.belongsTo(models.pregunta, {as: 'pregunta'});
 
     }
   }

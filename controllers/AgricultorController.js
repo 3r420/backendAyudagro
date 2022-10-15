@@ -6,7 +6,7 @@ module.exports={
 List(_,res){
               return agricultor.findAll({})
               .then(agricultor => res.status(200).send(agricultor))
-              .catch(error => res.status(400).send(error))
+              .catch(error => res.status(400).send(error));
 },
 ListAt(req,res){
               return agricultor.findAll({
