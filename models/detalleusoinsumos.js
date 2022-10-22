@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   detalleUsoInsumos.init({
-    idInsumo: DataTypes.FLOAT
+    idInsumo: DataTypes.INTEGER,
+    
   }, {
     sequelize,
     modelName: 'detalleUsoInsumos',

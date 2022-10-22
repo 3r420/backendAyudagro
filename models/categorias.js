@@ -15,7 +15,12 @@ module.exports = (sequelize, DataTypes) => {
   }
   categorias.init({
     nombre: DataTypes.STRING,
-    descripcion: DataTypes.STRING
+    descripcion: DataTypes.STRING,
+    idCategoriaSuperior:{
+      type:DataTypes.INTEGER,
+      allowNull:false,
+      prymaryKey:true
+    },
   }, {
     sequelize,
     modelName: 'categorias',

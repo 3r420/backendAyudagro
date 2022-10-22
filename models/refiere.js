@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const detallerespuesta = require('./detallerespuesta');
 module.exports = (sequelize, DataTypes) => {
   class refiere extends Model {
     /**
@@ -11,13 +12,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+      this.belongsTo(detallerespuesta,{})
     }
   }
   refiere.init({
-    idInsumo: DataTypes.FLOAT,
-    idPregunta:DataTypes.FLOAT,
-    idRespuesta:DataTypes.FLOAT,
-    idAgricultor:DataTypes.FLOAT
+    idInsumo: DataTypes.INTEGER,
+    idPregunta:DataTypes.INTEGER,
+    idRespuesta:DataTypes.INTEGER,
+    idAgricultor:DataTypes.INTEGER,
 
 
   }, {
