@@ -11,7 +11,6 @@ module.exports = {
       },*/
       idInsumo: {
         allowNull:false,
-        autoIncrement:true,
         prymaryKey:true,
         type: Sequelize.INTEGER,
         references:{

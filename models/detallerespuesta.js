@@ -11,9 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      
     }
   }
   detalleRespuesta.init({
+    idPregunta:DataTypes.INTEGER,
+    idRespuesta:DataTypes.INTEGER,
     fecha: DataTypes.STRING,
     cantidadLikes: DataTypes.FLOAT,
     cantidadNoLikes: DataTypes.FLOAT

@@ -15,7 +15,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   pregunta.init({
     nombre: DataTypes.STRING,
-    contenido: DataTypes.STRING
+    contenido: DataTypes.STRING,
+    idCategoria:DataTypes.INTEGER,
+    idAgricultor:DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'pregunta',

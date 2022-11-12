@@ -2,6 +2,8 @@
 const {
   Model
 } = require('sequelize');
+const Agricultores= require("../models").Agricultores;
+const cultivos=require("../models").cultivos;
 module.exports = (sequelize, DataTypes) => {
   class detalleCultivo extends Model {
     /**
@@ -11,12 +13,16 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.belongsTo(models.Agricultores,{
+        foreignKey:'id_Agricultor'
+      });
+      this.belongsTo(models.cultivos,{
+        foreignKey:'id_cultivo'
+      })
       
     }
   }
   detalleCultivo.init({
-    fechaInicio: DataTypes.STRING,
-    lugarCultivo: DataTypes.STRING,
     id_Cultivo:{
       type:DataTypes.INTEGER,
       allowNull: false,
@@ -27,9 +33,13 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       primaryKey: true
     },
+    fechaInicio: DataTypes.STRING,
+    lugarCultivo: DataTypes.STRING,
+    
   }, {
     sequelize,
-    modelName: 'detalleCultivos',
+    modelName: 'detalleCultivo',
+    tableName: 'detalleCultivos',
   });
   return detalleCultivo;
 };
