@@ -4,7 +4,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('detalleCultivos', [{
-   
+      id_Cultivo:1,
       id_Agricultor:1,
       fechaInicio:'24/09/2022',
       lugarCultivo:'San migel',

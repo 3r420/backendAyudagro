@@ -26,12 +26,12 @@ module.exports = (sequelize, DataTypes) => {
     id_Cultivo:{
       type:DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      foreignKey: true,
     },
     id_Agricultor:{
       type:DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      foreignKey: true,
     },
     fechaInicio: DataTypes.STRING,
     lugarCultivo: DataTypes.STRING,

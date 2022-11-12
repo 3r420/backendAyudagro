@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   perfilAcademico.init({
+    idEstudio:DataTypes.INTEGER,
     idAgricultor:DataTypes.INTEGER,
     nombreCarrera: DataTypes.STRING,
     fehaGrado: DataTypes.STRING,

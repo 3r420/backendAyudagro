@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   detalleUsoInsumos.init({
+    idCultivo:DataTypes.INTEGER,
     idInsumo: DataTypes.INTEGER,
     
   }, {

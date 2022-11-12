@@ -3,15 +3,14 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('refieres', {
-      /*id: {
+      id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
-      },*/
+      },
       idInsumo: {
         allowNull:false,
-        prymaryKey:true,
         type: Sequelize.INTEGER,
         references:{
           model:{tableName:'insumos'},
@@ -20,7 +19,6 @@ module.exports = {
       },
       idPregunta: {
         allowNull:false,
-        prymaryKey:true,
         type: Sequelize.INTEGER,
         references:{
           model:{tableName:'pregunta'},
@@ -29,7 +27,6 @@ module.exports = {
       },
       idRespuesta: {
         allowNull:false,
-        prymaryKey:true,
         type: Sequelize.INTEGER,
         references:{
           model:{tableName:'respuesta'},
@@ -38,7 +35,6 @@ module.exports = {
       },
       idAgricultor: {
         allowNull:false,
-        prymaryKey:true,
         type: Sequelize.INTEGER,
         references:{
           model:{tableName:'Agricultores'},

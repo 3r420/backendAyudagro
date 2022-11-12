@@ -6,7 +6,10 @@ module.exports = {
     return queryInterface.bulkInsert('Agricultores', [{
       nombre: 'Ivan',
       apellido: 'Cuasput',
+      nickName:'1v4n',
+      PassWorld:tt33,
       direccion:'Purece',
+      Email:'yderazo31@misena.edu.co',
       posLng:'323-3434-23',
       posLat:'233-44442-23',
       puntosEstudio:3,

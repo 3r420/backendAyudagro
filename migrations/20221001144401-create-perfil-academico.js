@@ -3,10 +3,15 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('perfilAcademicos', {
+      id:{
+        allowNull:false,
+        autoIncrement:true,
+        primaryKey:true,
+        type:Sequelize.INTEGER,
+      },
+
       idEstudio: {
         allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
         type: Sequelize.INTEGER,
         references:{
           model:{tableName:'Estudios'},
@@ -16,7 +21,6 @@ module.exports = {
       
       idAgricultor:{
         allowNull:false,
-        prymaryKey:true,
         type:Sequelize.INTEGER,
         references:{
           model:{tableName:'Agricultores'},
