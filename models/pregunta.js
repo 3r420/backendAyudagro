@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-       /*this.belongsTo(models.Agricultor,{
+       this.belongsTo(models.Agricultor,{
         foreignKey:'idAgricultor'});
-        this.belongsTo(models.categoria,{
-          foreignKey:'idCategoria',
-        });*/
+        //this.belongsTo(models.categoria,{
+         // foreignKey:'idCategoria',
+        //});*/
        // this.hasMany(models.detalleRespuesta,{
         //  foreignKey:'idPregunta'
        // });
@@ -42,7 +42,9 @@ module.exports = (sequelize, DataTypes) => {
     idCategoria:{
       type:DataTypes.INTEGER,
     references:{model:"categorias",key:"id"}},
-    idAgricultor:DataTypes.INTEGER,
+    idAgricultor:{
+      type:DataTypes.INTEGER,
+    references:{model:"agricultor",key:"id"}},
   }, {
     sequelize,
     modelName: 'pregunta',

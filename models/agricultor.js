@@ -22,6 +22,9 @@ module.exports = (sequelize, DataTypes) => {
      // this.hasMany(models.detalleRespuesta,{foreignKey:'idAgricultor'});
       this.hasMany(models.perfilAcademicos,{foreignKey:'idAgricultor'});
       this.hasMany(models.Refiere,{foreignKey:'idAgricultor'});*/
+      this.hasMany(models.pregunta,{
+        foreignKey:'idAgricultor'
+      })
     }
   }
   Agricultor.init({
