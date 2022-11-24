@@ -2,6 +2,9 @@
 const {
   Model
 } = require('sequelize');
+const Agricultor=require("./agricultor")//.Agricultor;
+const respuesta=require('./respuesta')//.respuesta;
+const pregunta=require('./pregunta')//.pregunta;
 module.exports = (sequelize, DataTypes) => {
   class detalleRespuesta extends Model {
     /**
@@ -10,11 +13,24 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      /*this.belongsTo(models.Agricultor,{
+        foreignKey:'id',targetKey:'idAgricultor'
+      });
+      this.belongsTo(models.respuesta,{
+        foreignKey:'id',targetKey:'idRespuesta'
+      });
+      this.belongsTo(models.pregunta,{
+        foreignKey:'id', targetKey:'idPregunta'
+      });*/
       
     }
   }
   detalleRespuesta.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     idAgricultor:DataTypes.INTEGER,
     idPregunta:DataTypes.INTEGER,
     idRespuesta:DataTypes.INTEGER,
@@ -24,6 +40,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'detalleRespuesta',
+    tableName: 'detalleRespuesta',
   });
   return detalleRespuesta;
 };

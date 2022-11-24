@@ -22,6 +22,9 @@ CreateAgricultor(req, res){
      return agricultor.create({
           nombre: req.body.nombre,
           apellido: req.body.apellido,
+          nickName:req.body.nickName,
+          passWorld: req.body.passWorld,
+          Email: req.body.Email,
           direccion: req.body.direccion,
           posLng: req.body.posLng,
           posLat: req.body.posLat,

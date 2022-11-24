@@ -1,8 +1,14 @@
 'use strict';
 const {
-  Model, INET, INTEGER, STRING
+  Model
 } = require('sequelize');
+const Refiere=require('./refiere')//.refiere;
+const perfilAcademico=require("./perfilacademico");
+const pregunta=require("./pregunta");
+const detalleRespuesta=require("./detallerespuesta");
+const detalleCultivo=require("./detallecultivo");
 module.exports = (sequelize, DataTypes) => {
+ 
   class Agricultor extends Model {
     /**
      * Helper method for defining associations.
@@ -11,9 +17,19 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      /*this.hasMany(models.detalleCultivo,{foreignKey:'idAgricultor'});
+      this.hasMany(models.pregunta,{foreignKey:'idAgricultor'});
+     // this.hasMany(models.detalleRespuesta,{foreignKey:'idAgricultor'});
+      this.hasMany(models.perfilAcademicos,{foreignKey:'idAgricultor'});
+      this.hasMany(models.Refiere,{foreignKey:'idAgricultor'});*/
     }
   }
   Agricultor.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     nombre: DataTypes.STRING,
     apellido: DataTypes.STRING,
     nickName:DataTypes.STRING,
@@ -27,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Agricultor',
-    tableName:'Agricultores'
+    tableName:'Agricultor'
   });
   return Agricultor;
 };

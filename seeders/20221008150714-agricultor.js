@@ -3,11 +3,11 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Agricultores', [{
+    return queryInterface.bulkInsert('Agricultor', [{
       nombre: 'Ivan',
       apellido: 'Cuasput',
       nickName:'1v4n',
-      PassWorld:tt33,
+      PassWorld:33,
       direccion:'Purece',
       Email:'yderazo31@misena.edu.co',
       posLng:'323-3434-23',
@@ -19,6 +19,6 @@ module.exports = {
     }]);
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Agricultores', null, {});
+    return queryInterface.bulkDelete('Agricultor', null, {});
   }
 };

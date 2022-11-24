@@ -2,8 +2,10 @@
 const {
   Model
 } = require('sequelize');
+const Estudios=require("./estudios")//.Estudios;
+const Agricultor=require("./agricultor")//.Agricultor;
 module.exports = (sequelize, DataTypes) => {
-  class perfilAcademico extends Model {
+  class perfilAcademicos extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,9 +13,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+    /*  this.belongsTo(models.Estudios,
+        {foreignKey:'id',targetKey:'idEstudio'});
+      this.belongsTo(models.Agricultor,
+        {foreignKey:'id',targetKey:'idAgricultor'});*/
     }
   }
-  perfilAcademico.init({
+  perfilAcademicos.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     idEstudio:DataTypes.INTEGER,
     idAgricultor:DataTypes.INTEGER,
     nombreCarrera: DataTypes.STRING,
@@ -21,7 +32,8 @@ module.exports = (sequelize, DataTypes) => {
     institucion: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'perfilAcademico',
+    modelName: 'perfilAcademicos',
+    tableName: 'perfilAcademicos',
   });
-  return perfilAcademico;
+  return perfilAcademicos;
 };

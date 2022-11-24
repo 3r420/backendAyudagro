@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
-const pregunta = require('../models').Pregunta;
+const pregunta = require('../models').pregunta;
+const registroMultimedia = require('../models').registroMultimedia;
 
 module.exports={
 
@@ -23,6 +24,17 @@ CreatePregunta(req, res){
           nombre: req.body.nombre,
           contenido: req.body.contenido
      }).then(pregunta => res.status(200).send(pregunta))
+     .catch(error => res.status(400).send(error))
+},
+
+ListPreguntas_registrosMultimedia(req,res){
+     return pregunta.findAll({
+          include: {
+               model: registroMultimedia
+             },
+             require:'true',
+     })
+     .then(pregunta => res.status(200).send(pregunta))
      .catch(error => res.status(400).send(error))
 },
 

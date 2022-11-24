@@ -1,11 +1,8 @@
 'use strict';
-
-const { sequelize } = require('../models');
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Agricultores', {
+    await queryInterface.createTable('Agricultor', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -19,13 +16,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       nickName:{
-        type:sequelize.STRING
+        type:Sequelize.STRING
       },
       PassWorld:{
-        type:sequelize.INTEGER
+        type:Sequelize.INTEGER
       },
       Email:{
-      type:sequelize.STRING
+      type:Sequelize.STRING
       },
       direccion: {
         type: Sequelize.STRING
@@ -53,6 +50,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Agricultores');
+    await queryInterface.dropTable('Agricultor');
   }
 };

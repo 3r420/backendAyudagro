@@ -29,12 +29,51 @@ const controladorPerfilacademico = require ('../controllers/PerfilacademicoContr
 const controladorPregunta = require ('../controllers/PreguntaController');
 const controladorRefiere = require ('../controllers/RefiereController');
 const controladorRegistromultimedia = require ('../controllers/RegistromultimediaController');
+const RespuestaController = require('../controllers/RespuestaController');
 const controladorRespuesta = require ('../controllers/RespuestaController');
 
 
 router.get('/listarAgricultor',controladorAgricultor.List);
 router.get('/Agricultor/:id',controladorAgricultor.ListAt);
 router.post('/nuevoAgricultor', controladorAgricultor.CreateAgricultor);
+
+router.get('/categorias',controladorCategorias.List);
+router.post('/nuevaCategorias',controladorCategorias.ListAt);
+
+router.get('/cultivo',controladorCultivo.List);
+router.post('/NuevoCultivo',controladorCultivo.CreateCultivo);
+
+router.get('/detallecultivo',controladorDetallecultivo.List);
+router.post('/NuevoDetallecultivo',controladorDetallecultivo.CreateDetallecultivo);
+
+router.get('/detalleRespuesta',controladorDetallerespuesta.List);
+router.post('/NuevaRespuesta',controladorRespuesta.CreateRespuesta);
+
+router.get('/estudios',controladorEstudios.List);
+router.post('/NuevoEstudios',controladorEstudios.CreateEstudios);
+
+router.get('/insumos',controladorInsumos.List);
+router.post('/NuevoInsumos',controladorInsumos.CreateInsumos);
+
+router.get('/perfilacademico',controladorPerfilacademico.List);
+router.post('/NuevoPerfilAcademico',controladorPerfilacademico.CreatePerfilacademico);
+
+router.get('/pregunta',controladorPregunta.List);
+router.post('/Nuevapregunta',controladorPregunta.CreatePregunta);
+
+router.get('/refiere',controladorRefiere.List);
+router.post('/NuevoRefiere',controladorRefiere.CreateRefiere);
+
+router.get('/registromultimedia',controladorRegistromultimedia.List);
+router.post('/NuevoRegistroMultimedia',controladorRegistromultimedia.CreateRegistromultimedia);
+
+router.get('/respuesta',controladorRespuesta.List);
+router.post('/NuevaRespuesta',controladorRespuesta.CreateRespuesta);
+
+
+router.get('/Pregunta_xxx', controladorPregunta.ListPreguntas_registrosMultimedia);
+
+
 /* GET home page. 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });

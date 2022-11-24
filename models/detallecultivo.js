@@ -2,8 +2,8 @@
 const {
   Model
 } = require('sequelize');
-const Agricultores= require("../models").Agricultores;
-const cultivos=require("../models").cultivos;
+const Agricultor= require("./agricultor")//.Agricultor;
+const cultivo=require("./cultivo")//.cultivo;
 module.exports = (sequelize, DataTypes) => {
   class detalleCultivo extends Model {
     /**
@@ -13,25 +13,29 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.belongsTo(models.Agricultores,{
-        foreignKey:'id_Agricultor'
+     /* this.belongsTo(models.Agricultor,{
+        foreignKey:'id',targetKey:'id_Agricultor'
       });
-      this.belongsTo(models.cultivos,{
-        foreignKey:'id_cultivo'
-      })
+      this.belongsTo(models.cultivo,{
+        foreignKey:'id',targetKey:'id_Cultivo'
+      });*/
       
     }
   }
   detalleCultivo.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     id_Cultivo:{
       type:DataTypes.INTEGER,
-      allowNull: false,
-      foreignKey: true,
+      
+     
     },
     id_Agricultor:{
       type:DataTypes.INTEGER,
-      allowNull: false,
-      foreignKey: true,
+      references:{model:"Agricultor",key:"id"},    
     },
     fechaInicio: DataTypes.STRING,
     lugarCultivo: DataTypes.STRING,
