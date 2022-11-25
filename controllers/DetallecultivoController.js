@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const detallecultivo = require('../models').Detallecultivo;
+const detallecultivo = require('../models/detallecultivo')
 
 module.exports={
 
