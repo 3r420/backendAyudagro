@@ -19,9 +19,12 @@ ListAt(req,res){
 
 },
 CreateCategorias(req, res){
+     
+
      return categorias.create({
           nombre: req.body.nombre,
           descripcion: req.body.descripcion,
+          idCategoriaSuperior:req.body.idCategoriaSuperior
      }).then(categorias => res.status(200).send(categorias))
      .catch(error => res.status(400).send(error))
 },

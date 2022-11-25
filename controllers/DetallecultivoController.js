@@ -20,10 +20,10 @@ ListAt(req,res){
 },
 CreateDetallecultivo(req, res){
      return detallecultivo.create({
-          fechaInicio: req.body.fechaInicio,
-          lugarCultivo: req.body.lugarCultivo,
           id_Cultivo: req.body.id_Cultivo,
-          id_Agricultor: req.body.id_Agricultor
+          id_Agricultor: req.body.id_Agricultor,
+          fechaInicio: req.body.fechaInicio,
+          lugarCultivo: req.body.lugarCultivo
      }).then(detallecultivo => res.status(200).send(detallecultivo))
      .catch(error => res.status(400).send(error))
 },
