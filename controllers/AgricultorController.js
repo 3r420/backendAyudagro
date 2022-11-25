@@ -30,7 +30,9 @@ CreateAgricultor(req, res){
           posLat: req.body.posLat,
           puntosEstudio: req.body.puntosEstudio,
           puntosParticipacion: req.body.puntosParticipacion
-     }).then(agricultor => res.status(200).send(agricultor))
+     })
+      
+     .then(agricultor => res.status(200).send(agricultor))
      .catch(error => res.status(400).send(error))
 },
 

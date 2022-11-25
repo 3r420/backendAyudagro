@@ -31,7 +31,7 @@ router.post('/nuevaCategorias',controladorCategorias.CreateCategorias);//error 4
 
 
 //rutas de la tabla cultivos
-router.get('/cultivo',controladorCultivo.List);//verificar error 400
+router.get('/cultivo',controladorCultivo.ListAt);//verificar error 400
 router.post('/NuevoCultivo',controladorCultivo.CreateCultivo);//verificar su funcionaminento error 500
 
 

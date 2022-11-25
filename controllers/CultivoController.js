@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const cultivo = require('../models').Cultivo;
+const cultivo = require('../models/cultivo')
 
 module.exports={
 
@@ -21,8 +21,9 @@ ListAt(req,res){
 CreateCultivo(req, res){
      return cultivo.create({
           nombre: req.body.nombre,
-          descripcion: req.body.descripcion
-     }).then(cultivo => res.status(200).send(cultivo))
+         descripcion: req.body.descripcion
+     })
+     .then(cultivo => res.status(200).send(cultivo))
      .catch(error => res.status(400).send(error))
 },
 
