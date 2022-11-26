@@ -26,8 +26,7 @@ CreateAgricultor(req, res){
           passWorld: req.body.passWorld,
           Email: req.body.Email,
           direccion: req.body.direccion,
-          posLng: req.body.posLng,
-          posLat: req.body.posLat,
+          ubicacion: req.body.ubicacion,
           puntosEstudio: req.body.puntosEstudio,
           puntosParticipacion: req.body.puntosParticipacion
      })

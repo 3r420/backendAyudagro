@@ -27,10 +27,7 @@ module.exports = {
       direccion: {
         type: Sequelize.STRING
       },
-      posLng: {
-        type: Sequelize.STRING
-      },
-      posLat: {
+      ubicacion: {
         type: Sequelize.STRING
       },
       puntosEstudio: {

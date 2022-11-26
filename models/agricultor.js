@@ -39,8 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     PassWorld:DataTypes.INTEGER,
     Email:DataTypes.STRING,
     direccion: DataTypes.STRING,
-    posLng: DataTypes.STRING,
-    posLat: DataTypes.STRING,
+    ubicacion: DataTypes.STRING,
     puntosEstudio: DataTypes.FLOAT,
     puntosParticipacion: DataTypes.FLOAT
   }, {
