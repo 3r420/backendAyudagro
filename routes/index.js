@@ -16,7 +16,8 @@ const controladorRefiere = require ('../controllers/RefiereController');
 const controladorRegistromultimedia = require ('../controllers/RegistromultimediaController');
 const controladorRespuesta = require ('../controllers/RespuestaController');
 
-//todas las rutas funcionales fueron probadas sin relaciones y con datos nulos. corregir y que no permita datos nulos
+//todas las rutas funcionales fueron probadas sin relaciones y con datos nulos. corregir su funcionamiento
+// y que no permita datos nulos-->esta ultima parte no es importante por el momento.
 
 //rutas de la tabla Agricultor/faltan algunas relaciones
 router.get('/listarAgricultor',controladorAgricultor.List);   //-->funciona
@@ -45,7 +46,7 @@ router.get('/detalleRespuesta',controladorDetallerespuesta.List);//verificar su 
 
 //rutas de la tabla Respuesta
 router.get('/respuesta',controladorRespuesta.List);//--> funciona bien
-router.post('/NuevaRespuesta',controladorRespuesta.CreateRespuesta);//-->funciona buen las dos sin relaciones 
+router.post('/NuevaRespuesta',controladorRespuesta.CreateRespuesta);//-->funciona bien las dos sin relaciones 
 
 
 //rutas de la tabla estudios
@@ -69,7 +70,7 @@ router.post('/Nuevapregunta',controladorPregunta.CreatePregunta);//--funciona bi
 
 //rutas de la tabla refiere
 router.get('/refiere',controladorRefiere.List);//-- funciona bien
-router.post('/NuevoRefiere',controladorRefiere.CreateRefiere);//-->funciona pero con defecto hay que corregir el envio de datos
+router.post('/NuevoRefiere',controladorRefiere.CreateRefiere);//-->corregido el mal funcionamiento. 
 
 
 //rutas de la tabla registromultimedia

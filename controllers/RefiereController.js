@@ -20,8 +20,10 @@ ListAt(req,res){
 },
 CreateRefiere(req, res){
      return refiere.create({
-          nombre: req.body.nombre,
-          descripcion: req.body.descripcion
+          idInsumo:req.body.idInsumo,
+          idPregunta:req.body.idPregunta,
+          idRespuesta:req.body.idRespuesta,
+          idAgricultor:req.body.idAgricultor,
      }).then(refiere => res.status(200).send(refiere))
      .catch(error => res.status(400).send(error))
 },
