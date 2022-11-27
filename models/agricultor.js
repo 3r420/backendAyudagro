@@ -8,7 +8,6 @@ const pregunta=require("./pregunta");
 const detalleRespuesta=require("./detallerespuesta");
 const detalleCultivo=require("./detallecultivo");
 module.exports = (sequelize, DataTypes) => {
- 
   class Agricultor extends Model {
     /**
      * Helper method for defining associations.

@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('cultivos', [{
+    return queryInterface.bulkInsert('cultivo', [{
       nombre: 'fresas',
       descripcion: 'cultivo de fresas de 6 meses de sembrada abonada con rootfeet',
       createdAt: new Date(),
@@ -11,6 +11,6 @@ module.exports = {
     }]);
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('cultivos', null, {});
+    return queryInterface.bulkDelete('cultivo', null, {});
   }
 };

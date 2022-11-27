@@ -2,9 +2,9 @@ const { Router } = require('express');
 var express = require('express');
 var router = express.Router();
 //constantes del llamado a los controladores
+const cultivoController = require ('../controllers/cultivoController');
 const controladorAgricultor = require ('../controllers/AgricultorController');
 const controladorCategorias = require ('../controllers/CategoriasController');
-const controladorCultivo = require ('../controllers/CultivoController');
 const controladorDetallecultivo = require ('../controllers/DetallecultivoController');
 const controladorDetallerespuesta = require ('../controllers/DetallerespuestaController');
 const controladorDetalleusoinsumos = require ('../controllers/DetalleusoinsumosController');
@@ -32,8 +32,7 @@ router.post('/nuevaCategorias',controladorCategorias.CreateCategorias);//error 4
 
 
 //rutas de la tabla cultivos
-router.get('/cultivo',controladorCultivo.List);//verificar error 400
-//router.post('/NuevoCultivo',controladorCultivo.CreateCultivo);//verificar su funcionaminento error 500
+router.get('/listarCultivo',cultivoController.List);//error 500
 
 
 //rutas de la tabla detalleCultivos
@@ -50,8 +49,8 @@ router.post('/NuevaRespuesta',controladorRespuesta.CreateRespuesta);//-->funcion
 
 
 //rutas de la tabla estudios
-router.get('/estudios',controladorEstudios.List);//-->error 500 verificar su funcionamiento
-router.post('/NuevoEstudios',controladorEstudios.CreateEstudios);//-->error 500 verificar
+router.get('/estudios',controladorEstudios.List);//-->error 500 (correjido)
+router.post('/NuevoEstudios',controladorEstudios.CreateEstudios);//-->error (corregido)
 
 //rutas de la tabla insumos
 router.get('/insumos',controladorInsumos.List)//-->error 500 verificar
