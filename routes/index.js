@@ -20,7 +20,7 @@ const controladorRespuesta = require ('../controllers/RespuestaController');
 // y que no permita datos nulos-->esta ultima parte no es importante por el momento.
 
 //rutas de la tabla Agricultor/faltan algunas relaciones
-router.get('/listarAgricultor',controladorAgricultor.List);   //-->funciona
+router.get('/3r420listarAgricultor',controladorAgricultor.List);   //-->funciona
 router.get('/Agricultor/:id',controladorAgricultor.ListAt);  //-->funciona 
 router.post('/nuevoAgricultor', controladorAgricultor.CreateAgricultor);  //-->funciona
 

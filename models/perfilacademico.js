@@ -25,8 +25,13 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    idEstudio:DataTypes.INTEGER,
-    idAgricultor:DataTypes.INTEGER,
+    idEstudio:{
+      type:DataTypes.INTEGER,
+      references:{model:'Estudios',key:"id"}
+    },
+    idAgricultor:{
+      type:DataTypes.INTEGER,
+      references:{model:'Agricultor',key:"id"}},
     nombreCarrera: DataTypes.STRING,
     fehaGrado: DataTypes.STRING,
     institucion: DataTypes.STRING

@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const perfilacademico = require('../models').Perfilacademico;
+const perfilacademico = require('../models/perfilacademico').PerfilAcademico;
 
 module.exports={
 
@@ -20,6 +20,8 @@ ListAt(req,res){
 },
 CreatePerfilacademico(req, res){
      return perfilacademico.create({
+          idEstudio:req.body.idEstudio,
+          idAgricultor:req.body.idAgricultor,
           nombreCarrera: req.body.nombreCarrera,
           fechaGrado: req.body.fechaGrado,
           institucion: req.body.institucion
