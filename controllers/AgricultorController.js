@@ -1,7 +1,20 @@
+const { QueryError } = require('sequelize');
 const Sequelize = require('sequelize');
+const pregunta = require('../models').pregunta;
+const rol = require('../models').rol;
 const agricultor = require('../models').Agricultor;
 
 module.exports={
+     ListPreguntas_Agricultor(req,res){
+          return agricultor.findAll({
+               include: {
+                    model: pregunta,
+                  },
+                  require:'true',
+          })
+          .then(pregunta => res.status(200).send(pregunta))
+          .catch(error => res.status(400).send(error.toString()))
+     },
 
 List(_,res){
               return agricultor.findAll({})

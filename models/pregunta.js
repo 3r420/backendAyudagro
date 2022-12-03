@@ -18,17 +18,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
        this.belongsTo(models.Agricultor,{
         foreignKey:'idAgricultor'});
-        //this.belongsTo(models.categoria,{
-         // foreignKey:'idCategoria',
-        //});*/
-       // this.hasMany(models.detalleRespuesta,{
-        //  foreignKey:'idPregunta'
-       // });
+        
         this.hasMany(models.registroMultimedia,{
-        foreignKey:'idPregunta'});
+          foreignKey:'idPregunta'});
 
         this.belongsTo(models.categorias,{
-         foreignKey:'idCategoria' });
+          foreignKey:'idCategoria' });
     }
   }
   pregunta.init({
@@ -44,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     references:{model:"categorias",key:"id"}},
     idAgricultor:{
       type:DataTypes.INTEGER,
-    references:{model:"agricultor",key:"id"}},
+    references:{model:"Agricultor",key:"id"}},
   }, {
     sequelize,
     modelName: 'pregunta',

@@ -18,16 +18,15 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       /*this.hasMany(models.detalleCultivo,{foreignKey:'idAgricultor'});
-      this.hasMany(models.pregunta,{foreignKey:'idAgricultor'});
      // this.hasMany(models.detalleRespuesta,{foreignKey:'idAgricultor'});
       this.hasMany(models.perfilAcademicos,{foreignKey:'idAgricultor'});
       this.hasMany(models.Refiere,{foreignKey:'idAgricultor'});*/
       this.hasMany(models.pregunta,{
         foreignKey:'idAgricultor'
-      }),
+      });
       this.belongsTo(models.rol,{
         foreignKey:'idRol'
-      })
+      });
     }
   }
   Agricultor.init({
@@ -36,7 +35,12 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    idRol:DataTypes.INTEGER,
+    idRol: {
+      type:DataTypes.INTEGER,
+      references: {
+        model: 'rol', key:'id'
+      }
+    },
     nombre: DataTypes.STRING,
     apellido: DataTypes.STRING,
     nickName:DataTypes.STRING,
