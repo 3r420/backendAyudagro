@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const insumos = require('../models').Insumos;
+const insumos = require('../models').insumos;
 
 module.exports={
 

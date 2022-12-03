@@ -7,6 +7,7 @@ const perfilAcademico=require("./perfilacademico");
 const pregunta=require("./pregunta");
 const detalleRespuesta=require("./detallerespuesta");
 const detalleCultivo=require("./detallecultivo");
+const rol=require("./rol");
 module.exports = (sequelize, DataTypes) => {
   class Agricultor extends Model {
     /**
@@ -23,6 +24,9 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Refiere,{foreignKey:'idAgricultor'});*/
       this.hasMany(models.pregunta,{
         foreignKey:'idAgricultor'
+      }),
+      this.belongsTo(models.rol,{
+        foreignKey:'idRol'
       })
     }
   }

@@ -5,7 +5,7 @@ require('sequelize');
 const insumos=require('./insumos');//.insumos;
 const pregunta=require('./pregunta');//.pregunta;
 const Agricultor=require('./agricultor');//.Agricultor;
-const { Sequelize } = require('.');
+const { Sequelize } = require('Sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Refiere extends Model {
     /**

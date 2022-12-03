@@ -1,6 +1,6 @@
 const {Model } = require('sequelize');
 const Sequelize = require('sequelize');
-const cultivo = require('../models').Cultivo;
+const cultivo = require('../models').cultivo;
 
 module.exports={
 

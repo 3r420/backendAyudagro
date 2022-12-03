@@ -33,11 +33,11 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
       references:{model:'Agricultor',key:"id"}},
     nombreCarrera: DataTypes.STRING,
-    fehaGrado: DataTypes.STRING,
+    fechaGrado: DataTypes.STRING,
     institucion: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'perfilAcademicos',
+    modelName: 'PerfilAcademico',
     tableName: 'perfilAcademicos',
   });
   return perfilAcademicos;

@@ -59,7 +59,7 @@ router.post('/NuevoInsumos',controladorInsumos.CreateInsumos);//--> erro 500 ver
 
 //rutas de la tabla perfilAcademico
 router.get('/perfilacademico',controladorPerfilacademico.List);//-->error 500 
-router.post('/NuevoPerfilAcademico',controladorPerfilacademico.CreatePerfilacademico);//-->error 500
+router.post('/NuevoPerfilAcademico',controladorPerfilacademico.CreatePerfilacademico);//-->VERIFICAR EL ENVIO DE LOS DATOS
 
 
 //rutas de la tabla pregunta
@@ -78,6 +78,7 @@ router.post('/NuevoRegistroMultimedia',controladorRegistromultimedia.CreateRegis
 
 
 router.get('/Pregunta_xxx', controladorPregunta.ListPreguntas_registrosMultimedia);//-->(ruta de prueba)funciona bien 
+
 
 
 /* GET home page. 

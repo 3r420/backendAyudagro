@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const Agricultor= require('./agricultor');
 module.exports = (sequelize, DataTypes) => {
   class rol extends Model {
     /**
@@ -11,6 +12,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.hasMany(models.Agricultor,{
+        foreignKey:'idRol'
+      })
     }
   }
   rol.init({

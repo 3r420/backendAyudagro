@@ -1,29 +1,29 @@
 const Sequelize = require('sequelize');
-const detallerespuesta = require('../models/detallerespuesta');
+const detalleRespuesta = require('../models').detalleRespuesta;
 
 module.exports={
 
 List(_,res){
-              return detallerespuesta.findAll({})
-              .then(detallerespuesta => res.status(200).send(detallerespuesta))
+              return detalleRespuesta.findAll({})
+              .then(detalleRespuesta => res.status(200).send(detalleRespuesta))
               .catch(error => res.status(400).send(error))
 },
 ListAt(req,res){
-              return detallerespuesta.findAll({
+              return detalleRespuesta.findAll({
                             where: {
                                  id: req.params.id
                             }
               })
-              .then(detallerespuesta => res.status(200).send(detallerespuesta))
+              .then(detalleRespuesta => res.status(200).send(detalleRespuesta))
               .catch(error => res.status(400).send(error))
 
 },
 CreateDetallerespuesta(req, res){
-     return detallerespuesta.create({
+     return detalleRespuesta.create({
           fecha: req.body.fecha,
           cantidadLikes: req.body.cantidadLikes,
           cantidadNoLikes: req.body.cantidadNoLikes
-     }).then(detallerespuesta => res.status(200).send(detallerespuesta))
+     }).then(detalleRespuesta => res.status(200).send(detalleRespuesta))
      .catch(error => res.status(400).send(error))
 },
 

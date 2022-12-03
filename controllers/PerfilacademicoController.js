@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const perfilacademico = require('../models/perfilacademico').PerfilAcademico;
+const perfilacademico = require('../models').PerfilAcademico;
 
 module.exports={
 
@@ -10,6 +10,7 @@ List(_,res){
 },
 ListAt(req,res){
               return perfilacademico.findAll({
+               
                             where: {
                                  id: req.params.id
                             }
