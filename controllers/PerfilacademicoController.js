@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const perfilacademico = require('../models').PerfilAcademico;
+const perfilacademico = require('../models').perfilAcademico;
 
 module.exports={
 

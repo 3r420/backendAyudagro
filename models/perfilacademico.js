@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
     institucion: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'PerfilAcademico',
+    modelName: 'perfilAcademico',
     tableName: 'perfilAcademicos',
   });
   return perfilAcademicos;
