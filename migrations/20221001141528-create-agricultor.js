@@ -1,4 +1,7 @@
 'use strict';
+
+const { sequelize } = require('../models');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -8,6 +11,13 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
+      },
+      idRol:{
+        type:Sequelize.INTEGER,
+        references:{
+          model:{tableName:'rol'},
+          key:'id'
+        },
       },
       nombre: {
         type: Sequelize.STRING

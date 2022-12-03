@@ -15,7 +15,7 @@ module.exports = {
         references:{
           model:{tableName:'insumos'},
           key:'id'
-        }
+        },
       },
       idPregunta: {
         allowNull:false,
