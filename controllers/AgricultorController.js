@@ -3,6 +3,7 @@ const Sequelize = require('sequelize');
 const pregunta = require('../models').pregunta;
 const rol = require('../models').rol;
 const agricultor = require('../models').Agricultor;
+const perfilAcademicos=require('../models').perfilAcademicos
 
 module.exports={
      ListPreguntas_Agricultor(req,res){
