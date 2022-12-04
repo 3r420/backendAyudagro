@@ -2,14 +2,17 @@ const { QueryError } = require('sequelize');
 const Sequelize = require('sequelize');
 const pregunta = require('../models').pregunta;
 const rol = require('../models').rol;
+const detalleCultivo = require('../models').detalleCultivo
 const agricultor = require('../models').Agricultor;
+const detalleRespuesta = require('../models').detalleRespuesta
 const perfilAcademicos=require('../models').perfilAcademicos
 
 module.exports={
-     ListPreguntas_Agricultor(req,res){
+     
+ ListPreguntas_Agricultor(req,res){
           return agricultor.findAll({
                include: {
-                    model: perfilAcademicos,
+                    model: detalleCultivo,
                   },
                   require:'true',
           })

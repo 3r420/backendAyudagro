@@ -1,10 +1,14 @@
 const Sequelize = require('sequelize');
-const detallecultivo = require('../models/detallecultivo')
+const detallecultivo = require('../models').detalleCultivo
+const Agricultor = require('../models').Agricultor
 
 module.exports={
 
 List(_,res){
-              return detallecultivo.findAll({})
+              return detallecultivo.findAll({ include: {
+               model: Agricultor,
+             },
+             require:'true',})
               .then(detallecultivo => res.status(200).send(detallecultivo))
               .catch(error => res.status(400).send(error))
 },

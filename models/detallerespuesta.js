@@ -13,15 +13,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      /*this.belongsTo(models.Agricultor,{
-        foreignKey:'id',targetKey:'idAgricultor'
+      this.belongsTo(models.Agricultor,{
+        foreignKey:'idAgricultor'
       });
-      this.belongsTo(models.respuesta,{
-        foreignKey:'id',targetKey:'idRespuesta'
-      });
-      this.belongsTo(models.pregunta,{
-        foreignKey:'id', targetKey:'idPregunta'
-      });*/
+     // this.belongsTo(models.respuesta,{
+       // foreignKey:'id',targetKey:'idRespuesta'
+      //});
+      //this.belongsTo(models.pregunta,{
+       // foreignKey:'id', targetKey:'idPregunta'
+      //});*/
       
     }
   }
@@ -31,7 +31,11 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    idAgricultor:DataTypes.INTEGER,
+    idAgricultor:{
+       type:DataTypes.INTEGER,
+       references:{
+        model:'Agricultor',key:'id'
+       } },
     idPregunta:DataTypes.INTEGER,
     idRespuesta:DataTypes.INTEGER,
     fecha: DataTypes.STRING,
