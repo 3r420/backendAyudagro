@@ -13,10 +13,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-    /*  this.belongsTo(models.Estudios,
-        {foreignKey:'id',targetKey:'idEstudio'});
+    // this.belongsTo(models.Estudios,
+     //   {foreignKey:'id',targetKey:'idEstudio'});
       this.belongsTo(models.Agricultor,
-        {foreignKey:'id',targetKey:'idAgricultor'});*/
+        {foreignKey:'idAgricultor'});
     }
   }
   perfilAcademicos.init({
@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
     institucion: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'perfilAcademico',
+    modelName: 'perfilAcademicos',
     tableName: 'perfilAcademicos',
   });
   return perfilAcademicos;

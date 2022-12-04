@@ -8,7 +8,7 @@ module.exports={
      ListPreguntas_Agricultor(req,res){
           return agricultor.findAll({
                include: {
-                    model: pregunta,
+                    model: perfilAcademicos,
                   },
                   require:'true',
           })
