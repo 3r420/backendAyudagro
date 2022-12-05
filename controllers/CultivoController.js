@@ -1,14 +1,15 @@
 const {Model } = require('sequelize');
 const Sequelize = require('sequelize');
 const cultivo = require('../models').cultivo;
-const detalleCultivo=require('../models').detalleCultivo
+const detalleCultivo=require('../models').detalleCultivo;
+const detalleUsoInsumos=require('../models').detalleUsoInsumos
 
 module.exports={
 
 List(_,res){
               return cultivo.findAll({
                include: {
-                    model: detalleCultivo,
+                    model: detalleUsoInsumos,
                   },
                   require:'true',
               })

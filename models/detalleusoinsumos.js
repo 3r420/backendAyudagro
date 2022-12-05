@@ -18,11 +18,11 @@ module.exports = (sequelize, DataTypes) => {
     /*
       this.belongsTo(models.insumos,{
         foreignKey:'id',targetKey:'idInsumo'
-      });
+      });*/
 
       this.belongsTo(models.cultivo,{
-        foreignKey:'id',targetKey:'idCultivo'
-      }); */
+        foreignKey:'idCultivo'
+      }); 
     }
   }
   detalleUsoInsumos.init({
@@ -31,10 +31,14 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    idCultivo:DataTypes.INTEGER,
-  
-    
-    idInsumo: DataTypes.INTEGER,
+    idCultivo:{
+      type:DataTypes.INTEGER,
+      references:{model:"cultivo",key:'id'},
+    },
+    idInsumo:{
+      type:DataTypes.INTEGER,
+      references:{model:'insumos',key:'id'}
+    },
     
     
   }, {

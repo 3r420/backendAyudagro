@@ -29,6 +29,8 @@ router.get('/listarAgriRol',controladorAgricultor.ListPreguntas_Agricultor)
 router.get('/categorias',controladorCategorias.List);  //-->funciona
 router.post('/nuevaCategorias',controladorCategorias.CreateCategorias);//error 400 corregitdo
 
+// rutas detalle uso insumos
+router.get('/listardetalleusoinsumos',controladorDetalleusoinsumos.List)
 
 
 //rutas de la tabla cultivos

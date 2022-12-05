@@ -14,10 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       this.hasMany(models.detalleCultivo,{
-        foreignKey:'id_Cultivo'});
+        foreignKey:'idCultivo'});
         
       this.hasMany(models.detalleUsoInsumos,{
-        foreignKey:'idCultivo'
+        foreignKey:'idInsumo'
       });
     }
   }
