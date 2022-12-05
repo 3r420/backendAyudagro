@@ -12,18 +12,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      /*this.hasMany(models.pregunta,{
+      this.hasMany(models.pregunta,{
         foreignKey:'idCategoria'
-      });*/
+      });
       /*this.belongsTo(models.categoria,{
         foreignKey:'id',targetkey:'idCategoriaSuperior'
       });
       this.hasMany(models.categoria,{
         foreignKey:'idCategoriaSuperior'
       })*/
-      this.hasMany(models.pregunta,{
-        foreignKey:'idCategoria'
-      });
     }
   }
   categorias.init({

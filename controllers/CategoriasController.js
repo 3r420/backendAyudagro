@@ -1,10 +1,14 @@
 const Sequelize = require('sequelize');
+const pregunta = require('../models').pregunta;
 const categorias = require('../models').categorias;
 
 module.exports={
 
 List(_,res){
-              return categorias.findAll({})
+              return categorias.findAll({include:{
+               model:pregunta,
+              },
+          require:'true',})
               .then(categorias => res.status(200).send(categorias))
               .catch(error => res.status(400).send(error))
 },
