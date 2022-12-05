@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
      this.belongsTo(models.Agricultor,{
         foreignKey:'id_Agricultor'
       });
-      /*this.belongsTo(models.cultivo,{
-        foreignKey:'id',targetKey:'id_Cultivo'
-      });*/
+      this.belongsTo(models.cultivo,{
+        foreignKey:'id_Cultivo'
+      });
       
     }
   }
