@@ -15,6 +15,9 @@ module.exports = {
       administrador: {
         type: Sequelize.STRING
       },
+      agronomo:{
+        type:Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

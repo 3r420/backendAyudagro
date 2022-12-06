@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   rol.init({
     agricultor: DataTypes.STRING,
-    administrador: DataTypes.STRING
+    administrador: DataTypes.STRING,
+    agronomo:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'rol',
