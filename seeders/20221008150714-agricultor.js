@@ -8,12 +8,9 @@ module.exports = {
       nombre: 'Ivan',
       apellido: 'Cuasput',
       nickName:'1v4n',
-      PassWorld:33,
-      direccion:'Purece',
+      PassWorld:'3BB3',
       Email:'yderazo31@misena.edu.co',
-      ubicacion:'el Diviso Barbacoas',
-      puntosEstudio:3,
-      puntosParticipacion:4.5,
+      direccion:'Purece',
       createdAt: new Date(),
       updatedAt: new Date()
     }]);

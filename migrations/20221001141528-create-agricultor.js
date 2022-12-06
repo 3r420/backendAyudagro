@@ -29,7 +29,7 @@ module.exports = {
         type:Sequelize.STRING
       },
       PassWorld:{
-        type:Sequelize.INTEGER
+        type:Sequelize.STRING
       },
       Email:{
       type:Sequelize.STRING
@@ -37,15 +37,7 @@ module.exports = {
       direccion: {
         type: Sequelize.STRING
       },
-      ubicacion: {
-        type: Sequelize.STRING
-      },
-      puntosEstudio: {
-        type: Sequelize.FLOAT
-      },
-      puntosParticipacion: {
-        type: Sequelize.FLOAT
-      },
+     
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

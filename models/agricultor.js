@@ -43,12 +43,9 @@ module.exports = (sequelize, DataTypes) => {
     nombre: DataTypes.STRING,
     apellido: DataTypes.STRING,
     nickName:DataTypes.STRING,
-    PassWorld:DataTypes.INTEGER,
+    PassWorld:DataTypes.STRING,
     Email:DataTypes.STRING,
     direccion: DataTypes.STRING,
-    ubicacion: DataTypes.STRING,
-    puntosEstudio: DataTypes.FLOAT,
-    puntosParticipacion: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'Agricultor',

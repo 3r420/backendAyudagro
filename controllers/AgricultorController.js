@@ -43,10 +43,7 @@ CreateAgricultor(req, res){
           nickName:req.body.nickName,
           PassWorld: req.body.PassWorld,
           Email: req.body.Email,
-          direccion: req.body.direccion,
-          ubicacion: req.body.ubicacion,
-          puntosEstudio: req.body.puntosEstudio,
-          puntosParticipacion: req.body.puntosParticipacion
+          direccion: req.body.direccion
      })
       
      .then(agricultor => res.status(200).send(agricultor))
