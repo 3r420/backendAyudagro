@@ -22,7 +22,7 @@ const controladorRespuesta = require ('../controllers/RespuestaController');
 //rutas de la tabla Agricultor/faltan algunas relaciones
 router.get('/3r420listarAgricultor',controladorAgricultor.List);   //-->funciona
 router.get('/Agricultor/:id',controladorAgricultor.ListAt);  //-->funciona 
-router.get('/nuevoAgricultor', controladorAgricultor.CreateAgricultor);  //-->funciona
+router.post('/nuevoAgricultor', controladorAgricultor.CreateAgricultor);  //-->funciona
 router.get('/listarAgriRol',controladorAgricultor.ListPreguntas_Agricultor)
 
 //rutas de la tabla categorias/fatltan relaciones

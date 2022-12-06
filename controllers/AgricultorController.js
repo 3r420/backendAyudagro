@@ -37,10 +37,11 @@ ListAt(req,res){
 },
 CreateAgricultor(req, res){
      return agricultor.create({
+          idRol:req.body.idRol,
           nombre: req.body.nombre,
           apellido: req.body.apellido,
           nickName:req.body.nickName,
-          passWorld: req.body.passWorld,
+          PassWorld: req.body.PassWorld,
           Email: req.body.Email,
           direccion: req.body.direccion,
           ubicacion: req.body.ubicacion,

@@ -39,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
         model: 'rol', key:'id'
       }
     },
+    idRol:DataTypes.INTEGER,
     nombre: DataTypes.STRING,
     apellido: DataTypes.STRING,
     nickName:DataTypes.STRING,
