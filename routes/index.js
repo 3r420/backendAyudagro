@@ -34,7 +34,7 @@ const controladorRespuesta = require ('../controllers/RespuestaController');
 
 router.get('/listarAgricultor',controladorAgricultor.List);
 router.get('/Agricultor/:id',controladorAgricultor.ListAt);
-router.post('/nuevoAgricultor', controladorAgricultor.CreateAgricultor);
+router.post('/CreateAgricultor', controladorAgricultor.CreateAgricultor);
 /* GET home page. 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
