@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Agricultor,{
         foreignKey:'idAgricultor'
       });
-     // this.belongsTo(models.respuesta,{
-       // foreignKey:'id',targetKey:'idRespuesta'
-      //});
+     this.belongsTo(models.Respuesta,{
+       foreignKey:'idRespuesta'
+      });
       //this.belongsTo(models.pregunta,{
        // foreignKey:'id', targetKey:'idPregunta'
       //});*/
@@ -36,8 +36,15 @@ module.exports = (sequelize, DataTypes) => {
        references:{
         model:'Agricultor',key:'id'
        } },
-    idPregunta:DataTypes.INTEGER,
-    idRespuesta:DataTypes.INTEGER,
+    idPregunta:{
+      type:DataTypes.INTEGER,
+    reference:{
+      model:'pregunta',key:'id'
+    }},
+    idRespuesta:{
+      type:DataTypes.INTEGER,
+      references:'respuesta',key:'id'
+    },
     fecha: DataTypes.STRING,
     cantidadLikes: DataTypes.FLOAT,
     cantidadNoLikes: DataTypes.FLOAT

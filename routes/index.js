@@ -44,7 +44,7 @@ router.post('/NuevoDetallecultivo',controladorDetallecultivo.CreateDetallecultiv
 
 //rutas de la tabla detalleRespuesta
 router.get('/detalleRespuesta',controladorDetallerespuesta.List);//verificar su funcionamiento error 500
-
+//router.get('/listarDetalle',controladorDetallerespuesta.)
 //rutas de la tabla Respuesta
 router.get('/respuesta',controladorRespuesta.List);//--> funciona bien
 router.post('/NuevaRespuesta',controladorRespuesta.CreateRespuesta);//-->funciona bien las dos sin relaciones 

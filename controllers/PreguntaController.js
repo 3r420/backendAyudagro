@@ -26,7 +26,9 @@ ListAt(req,res){
 CreatePregunta(req, res){
      return pregunta.create({
           nombre: req.body.nombre,
-          contenido: req.body.contenido
+          contenido: req.body.contenido,
+          idCategoria:req.body.idCategoria,
+          idAgricultor:req.body.idAgricultor
      }).then(pregunta => res.status(200).send(pregunta))
      .catch(error => res.status(400).send(error))
 },
