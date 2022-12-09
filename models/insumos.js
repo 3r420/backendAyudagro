@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(models.Refiere,{
         foreignKey:'idInsumo'
       });
-      /*this.hasMany(models.detalleUsoInsumos,{
+      this.hasMany(models.detalleUsoInsumos,{
         foreignKey:'idInsumo'
-      });*/
+      });
 
     }
   }
