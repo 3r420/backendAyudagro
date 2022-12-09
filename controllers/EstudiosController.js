@@ -1,10 +1,16 @@
 const Sequelize = require('sequelize');
 const estudios = require('../models').Estudios;
+const perfilAcademicos =require('../models').perfilAcademicos
 
 module.exports={
 
 List(_,res){
-              return estudios.findAll({})
+              return estudios.findAll({
+               include: {
+                    model: perfilAcademicos,
+                  },
+                  require:'true'
+              })
               .then(estudios => res.status(200).send(estudios))
               .catch(error => res.status(400).send(error))
 },
