@@ -2,12 +2,13 @@ const Sequelize = require('sequelize');
 const categorias = require('../models').categorias;
 const pregunta = require('../models').pregunta;
 const registroMultimedia = require('../models').registroMultimedia;
+const detalleRespuesta = require('../models').detalleRespuesta
 
 module.exports={
 
 List(_,res){
               return pregunta.findAll({ include: {
-               model: categorias,
+               model: detalleRespuesta,
              },
              require:'true',})
               .then(pregunta => res.status(200).send(pregunta))
