@@ -22,8 +22,11 @@ module.exports = (sequelize, DataTypes) => {
        this.belongsTo(models.Agricultor,{
         foreignKey:'idAgricultor'});
         
-        this.hasMany(models.registroMultimedia,{
+        this.hasMany(models.Refiere,{
           foreignKey:'idPregunta'});
+          
+          this.hasMany(models.registroMultimedia,{
+            foreignKey:'idPregunta'});
 
         this.belongsTo(models.categorias,{
           foreignKey:'idCategoria' });

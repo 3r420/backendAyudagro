@@ -6,13 +6,14 @@ const detalleCultivo = require('../models').detalleCultivo
 const agricultor = require('../models').Agricultor;
 const detalleRespuesta = require('../models').detalleRespuesta
 const perfilAcademicos=require('../models').perfilAcademicos
+const Refiere =require('../models').Refiere;
 
 module.exports={
      
  ListPreguntas_Agricultor(req,res){
           return agricultor.findAll({
                include: {
-                    model: detalleCultivo,
+                    model: Refiere,
                   },
                   require:'true',
           })

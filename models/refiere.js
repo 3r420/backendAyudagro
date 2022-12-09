@@ -16,20 +16,17 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       
       // define association here
-     /* this.belongsTo(insumos,{
-        foreignKey:'idInsumos'//,targetKey:''
+        this.belongsTo(models.insumos,{
+        foreignKey:'idInsumo'//,targetKey:''
       });
-      refiere.belongsTo(models.models.respuesta,{
-        foreignKey:'idRespuesta'//,targetKey:''
-      });
-      refiere.belongsTo(models.pregunta,{
+      this.belongsTo(models.pregunta,{
         foreignKey:'idPregunta'//, targetKey:''
       });
-      refiere.belongsTo(models.Agricultor,{
+      this.belongsTo(models.Agricultor,{
         foreignKey:'idAgricultor'//,targetKey:''
-      });*/
+      });
 
-      //Refiere.belongsTo(models.Respuesta, {foreignKey: 'idRespuesta'});
+      this.belongsTo(models.Respuesta, {foreignKey: 'idRespuesta'});
     }
   }
   Refiere.init({

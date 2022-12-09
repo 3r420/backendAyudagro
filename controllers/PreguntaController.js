@@ -3,12 +3,12 @@ const categorias = require('../models').categorias;
 const pregunta = require('../models').pregunta;
 const registroMultimedia = require('../models').registroMultimedia;
 const detalleRespuesta = require('../models').detalleRespuesta
-
+const Refiere=require('../models').Refiere;
 module.exports={
 
 List(_,res){
               return pregunta.findAll({ include: {
-               model: detalleRespuesta,
+               model: Refiere,
              },
              require:'true',})
               .then(pregunta => res.status(200).send(pregunta))
