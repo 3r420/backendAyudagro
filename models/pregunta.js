@@ -38,11 +38,11 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    nombre: DataTypes.STRING,
+    fecha: DataTypes.DATE,
     contenido: DataTypes.STRING,
     idCategoria:{
-      type:DataTypes.INTEGER,
-    references:{model:"categorias",key:"id"}},
+        type:DataTypes.INTEGER,
+      references:{model:"categorias",key:'id'}},
     idAgricultor:{
       type:DataTypes.INTEGER,
     references:{model:"Agricultor",key:"id"}},
