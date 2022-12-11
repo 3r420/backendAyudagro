@@ -25,7 +25,7 @@ ListAt(req,res){
 },
 CreatePregunta(req, res){
      return pregunta.create({
-          fecha: req.body.fecha,
+          fecha:new Date(),
           contenido: req.body.contenido,
           idCategoria:req.body.idCategoria,
           idAgricultor:req.body.idAgricultor

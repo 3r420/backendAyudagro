@@ -29,7 +29,7 @@ ListAt(req,res){
 },
 CreateRespuesta(req, res){
      return Respuesta.create({
-          fecha: req.body.fecha,
+          fecha: new Date(),
           contenido: req.body.contenido,
           estado: req.body.estado
           

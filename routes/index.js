@@ -66,7 +66,7 @@ router.post('/NuevoPerfilAcademico',controladorPerfilacademico.CreatePerfilacade
 
 //rutas de la tabla pregunta
 router.get('/pregunta',controladorPregunta.List);//-->funciona bien 
-router.post('/Nuevapregunta',controladorPregunta.CreatePregunta);//--funciona bien 
+router.post('/CreatePregunta',controladorPregunta.CreatePregunta);//--funciona bien 
 
 
 //rutas de la tabla refiere
