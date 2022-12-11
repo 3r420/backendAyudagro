@@ -7,9 +7,8 @@ const Refiere=require('../models').Refiere;
 module.exports={
 
 List(_,res){
-              return pregunta.findAll({ include: {
-               model: Refiere,
-             },
+              return pregunta.findAll({ 
+             
              require:'true',})
               .then(pregunta => res.status(200).send(pregunta))
               .catch(error => res.status(400).send(error))

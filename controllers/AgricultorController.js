@@ -12,9 +12,6 @@ module.exports={
      
  ListPreguntas_Agricultor(req,res){
           return agricultor.findAll({
-               include: {
-                    model: Refiere,
-                  },
                   require:'true',
           })
           .then(pregunta => res.status(200).send(pregunta))
