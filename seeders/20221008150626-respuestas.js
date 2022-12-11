@@ -4,7 +4,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('respuesta', [{
-      nombre: 'combatir plagas',
+      fecha:new Date(),
       contenido: 'las plagas se eliminan con insecticida',
       estado: '👍',
       createdAt: new Date(),

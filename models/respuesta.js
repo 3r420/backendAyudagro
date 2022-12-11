@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    nombre: DataTypes.STRING,
+    fecha: DataTypes.DATEONLY,
     contenido: DataTypes.STRING,
     estado: DataTypes.STRING
   }, {

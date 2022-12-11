@@ -9,8 +9,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nombre: {
-        type: Sequelize.STRING
+      fecha: {
+        type: Sequelize.DATEONLY
       },
       contenido: {
         type: Sequelize.STRING

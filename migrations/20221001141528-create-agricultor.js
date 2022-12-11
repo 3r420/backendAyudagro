@@ -13,6 +13,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       idRol:{
+        allowNull: false,
         type:Sequelize.INTEGER,
         references:{
           model:{tableName:'rol'},
@@ -20,21 +21,26 @@ module.exports = {
         },
       },
       nombre: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       apellido: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       nickName:{
         type:Sequelize.STRING
       },
       PassWorld:{
+        allowNull: false,
         type:Sequelize.STRING
       },
       Email:{
+        allowNull: false,
       type:Sequelize.STRING
       },
       direccion: {
+        allowNull: false,
         type: Sequelize.STRING
       },
      

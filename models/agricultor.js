@@ -34,13 +34,15 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     idRol: {
+      allowNull: false,
       type:DataTypes.INTEGER,
       references: {
         model: 'rol', key:'id'
       }
     },
-    idRol:DataTypes.INTEGER,
-    nombre: DataTypes.STRING,
+    nombre: {
+      allowNull: false,
+      type:DataTypes.STRING},
     apellido: DataTypes.STRING,
     nickName:DataTypes.STRING,
     PassWorld:DataTypes.STRING,
