@@ -16,11 +16,11 @@ List(_,res){
 ListAt(req,res){
               return pregunta.findAll({
                             where: {
-                                 id: req.params.id
+                                 id: req.parans .id
                             }
               })
               .then(pregunta => res.status(200).send(pregunta))
-              .catch(error => res.status(400).send(error))
+              .catch(error => res.status(400).send(Error))
 
 },
 CreatePregunta(req, res){
@@ -36,7 +36,10 @@ CreatePregunta(req, res){
 ListPreguntas_registrosMultimedia(req,res){
      return pregunta.findAll({
           include: {
-               model: registroMultimedia
+               model: registroMultimedia,
+               were:{
+                    descripcion,
+               }
              },
              require:'true',
      })

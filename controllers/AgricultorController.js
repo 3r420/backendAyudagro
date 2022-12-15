@@ -11,9 +11,13 @@ const Refiere =require('../models').Refiere;
 module.exports={
      
  ListPreguntas_Agricultor(req,res){
-          return agricultor.findAll({
-                  require:'true',
-          })
+          return agricultor.findAll({  include: {
+               model:detalleCultivo,
+             },
+             require:'true',
+         })
+                  
+     
           .then(pregunta => res.status(200).send(pregunta))
           .catch(error => res.status(400).send(error.toString()))
      },

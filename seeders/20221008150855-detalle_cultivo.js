@@ -7,7 +7,6 @@ module.exports = {
       id_Cultivo:1,
       id_Agricultor:1,
       fechaInicio:'24/09/2022',
-      lugarCultivo:'San migel',
       createdAt: new Date(),
       updatedAt: new Date()
     }]);

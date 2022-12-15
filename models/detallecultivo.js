@@ -38,8 +38,6 @@ module.exports = (sequelize, DataTypes) => {
       references:{model:"Agricultor",key:"id"},    
     },
     fechaInicio: DataTypes.STRING,
-    lugarCultivo: DataTypes.STRING,
-    
   }, {
     sequelize,
     modelName: 'detalleCultivo',

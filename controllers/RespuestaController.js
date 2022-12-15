@@ -8,9 +8,6 @@ module.exports={
 
 List(_,res){
               return Respuesta.findAll({
-               include: {
-                    model: Refiere,
-                  },
                   require:'true',
                })
           
@@ -31,7 +28,7 @@ CreateRespuesta(req, res){
      return Respuesta.create({
           fecha: new Date(),
           contenido: req.body.contenido,
-          estado: req.body.estado
+          estado: "👍"
           
      }).then(Respuesta => res.status(200).send(Respuesta))
      .catch(error => res.status(400).send(error))
