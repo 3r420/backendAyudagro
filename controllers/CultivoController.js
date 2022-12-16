@@ -9,7 +9,7 @@ module.exports={
 List(_,res){
               return cultivo.findAll({
                include: {
-                    model: detalleUsoInsumos,
+                    model: detalleCultivo,
                   },
                   require:'true',
               })

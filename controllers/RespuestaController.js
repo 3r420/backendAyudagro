@@ -8,6 +8,9 @@ module.exports={
 
 List(_,res){
               return Respuesta.findAll({
+               include: {
+                    model: detalleRespuesta,
+                  },
                   require:'true',
                })
           

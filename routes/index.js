@@ -23,7 +23,7 @@ const controladorRespuesta = require ('../controllers/RespuestaController');
 router.get('/3r420listarAgricultor',controladorAgricultor.List);   //-->funciona
 router.get('/Agricultor/:id',controladorAgricultor.ListAt);  //-->funciona 
 router.post('/nuevoAgricultor', controladorAgricultor.CreateAgricultor);  //-->funciona
-router.get('/listarAgriRol',controladorAgricultor.ListPreguntas_Agricultor)
+router.get('/listarAgrodetalle',controladorAgricultor.Listdetalle_Agricultor)
 
 //rutas de la tabla categorias/fatltan relaciones
 router.get('/categorias',controladorCategorias.List);  //-->funciona
@@ -34,7 +34,7 @@ router.get('/listardetalleusoinsumos',controladorDetalleusoinsumos.List)
 
 
 //rutas de la tabla cultivos
-router.get('/listarCultivo',cultivoController.List);//error 500
+router.get('/listarCultivoDetalle',cultivoController.List);//error 500
 
 
 //rutas de la tabla detalleCultivos
@@ -65,7 +65,7 @@ router.post('/NuevoPerfilAcademico',controladorPerfilacademico.CreatePerfilacade
 
 
 //rutas de la tabla pregunta
-router.get('/pregunta',controladorPregunta.ListAt);//-->funciona bien 
+router.get('/preguntadetalle',controladorPregunta.ListAt);//-->funciona bien 
 router.post('/CreatePregunta',controladorPregunta.CreatePregunta);//--funciona bien 
 router.get('/listarpregunta',controladorPregunta.ListPreguntas_registrosMultimedia)
 

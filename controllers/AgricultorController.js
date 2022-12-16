@@ -10,7 +10,7 @@ const Refiere =require('../models').Refiere;
 
 module.exports={
      
- ListPreguntas_Agricultor(req,res){
+ Listdetalle_Agricultor(req,res){
           return agricultor.findAll({  include: {
                model:detalleCultivo,
              },

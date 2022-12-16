@@ -7,13 +7,19 @@ const Refiere=require('../models').Refiere;
 module.exports={
 
 List(_,res){
-              return pregunta.findAll({ })
+              return pregunta.findAll({
+               include:{
+                    model:detalleRespuesta
+               },
+               require:true
+               })
               .then(pregunta => res.status(200).send(pregunta))
               .catch(error => res.status(400).send(error))
 },
 ListAt(req,res){
               return pregunta.findAll({
                             
+               
               })
               .then(pregunta => res.status(200).send(pregunta))
               .catch(error => res.status(400).send(Error))

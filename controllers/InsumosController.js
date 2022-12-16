@@ -7,7 +7,7 @@ module.exports={
 List(_,res){
               return insumos.findAll({
                include: {
-                    model: Refiere,
+                    model: detalleUsoInsumos,
                   },
                   require:'true',})
               
