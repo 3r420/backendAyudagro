@@ -33,12 +33,13 @@ module.exports = {
       },
       PassWorld:{
         allowNull: false,
-        type:Sequelize.STRING
+        type:Sequelize.STRING,
+        
       },
-      Email:{
+      Email: {
+        type: Sequelize.STRING,
         allowNull: false,
-      type:Sequelize.STRING
-      },
+    },
       direccion: {
         allowNull: false,
         type: Sequelize.STRING
